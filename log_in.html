@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Log In</title>
+</head>
+<body>
+
+<div class="login-container">
+	<h1>Login</h1>
+	<form id="loginform">
+		<label for="username">Username:</label>
+		<input type="name" id="username" name="username" required />
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password" required />
+		<button type="submit" onclick="login()">Login</button>
+	</form>
+	<p id="error-message"></p>
+</div>
+
+<style type="text/css">
+	
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-color: #ffffff;
+}
+
+.login-container {
+	background-color: #ffffff;
+	padding: 20px;
+	border: 1px solid;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 8px;
+}
+
+input {
+	width: 100%;
+	padding: 8px;
+	margin-bottom: 16px;
+	box-sizing: border-box;
+}
+
+button {
+	background-color: #007bff;
+	color: #ffffff;
+	font-size: 15px;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #0056b3;
+}
+
+#error-message {
+	color: #ff0000;
+}
+
+@media screen and (max-width: 600px) {
+	.login-container {
+		width: 50%;
+	}
+}
+
+</style>
+
+<script type="text/javascript">
+	
+function login () {
+   let username = document.getElementById("username").value;
+   let password = document.getElementById("password").value;
+   let errorMessage = document.getElementById("error-message").value;
+};
+
+
+if (username === "examle" && password === "password") {
+	errorMessage.textContent = "";
+    alert("Login Succesful!")
+} else {
+	errorMessage.textContent = "Invalid username or password";
+};
+
+</script>
+</body>
+</html>
